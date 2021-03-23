@@ -1,0 +1,171 @@
+.home-blog-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 77%;
+      grid-template-columns: 77%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0;
+}
+
+.home-blog-list .home-blog-buttons {
+  margin: 30px auto 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.home-blog-list .home-blog-buttons a {
+  padding: 10px 20px;
+  background-color: var(--secondary-text-color);
+  color: var(--primary-text-color);
+  margin-right: 10px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.home-blog-list .home-blog-buttons a:hover {
+  -webkit-box-shadow: 0 2px 0 var(--secondary-text-color);
+          box-shadow: 0 2px 0 var(--secondary-text-color);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.home-blog-list .home-blog-header {
+  background-color: var(--primary-text-color);
+  color: var(--quinary-text-color);
+  width: 96%;
+  padding: 10px;
+  margin: 0 auto 20px;
+}
+
+.home-blog-list .home-blog-list-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 31% 31% 31%;
+      grid-template-columns: 31% 31% 31%;
+  row-gap: 15px;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-blog-list .home-blog-list-container .home-blog-item {
+  -webkit-box-shadow: 0 1px 4px var(--quatenary-text-color);
+          box-shadow: 0 1px 4px var(--quatenary-text-color);
+  overflow: hidden;
+}
+
+.home-blog-list .home-blog-list-container .home-blog-item:hover .home-blog-title h3 {
+  color: var(--secondary-text-color);
+}
+
+.home-blog-list .home-blog-list-container .home-blog-item .home-blog-image {
+  padding: 100px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-blog-list .home-blog-list-container .home-blog-time {
+  padding: 10px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--primary-text-color);
+  font-size: 16px;
+}
+
+.home-blog-list .home-blog-list-container .home-blog-time p:first-child {
+  background-color: var(--secondary-text-color);
+  padding: 5px 10px;
+}
+
+.home-blog-list .home-blog-list-container .home-blog-title {
+  text-align: center;
+}
+
+.home-blog-list .home-blog-list-container .home-blog-title h3 {
+  color: var(--primary-text-color);
+  font-weight: 600;
+  padding: 15px 0 10px;
+}
+
+.home-blog-list .home-blog-list-container .home-blog-title p {
+  font-style: italic;
+  font-weight: lighter;
+  padding: 0 20px;
+  color: var(--quatenary-text-color);
+}
+
+.home-blog-list .home-blog-list-container .home-blog-icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33.5% 33.5% 33%;
+      grid-template-columns: 33.5% 33.5% 33%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.home-blog-list .home-blog-list-container .home-blog-icons article {
+  background-color: #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid var(--quatenary-text-color);
+  color: var(--quatenary-text-color);
+  padding: 10px 0;
+}
+
+.home-blog-list .home-blog-list-container .home-blog-icons article i {
+  padding-right: 5px;
+}
+
+.home-blog-list .home-blog-list-container .home-blog-icons article:last-child {
+  border: none;
+}
+
+.home-blog-list .home-blog-list-container .home-blog-empty {
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .home-blog-list .home-blog-list-container {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .home-blog-list .home-blog-list-container {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .home-blog-list {
+    -ms-grid-columns: 95%;
+        grid-template-columns: 95%;
+  }
+}
+/*# sourceMappingURL=home-blog-list.css.map */

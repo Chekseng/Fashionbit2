@@ -1,0 +1,46 @@
+<section class="home-blog-list">
+
+  <div class="home-blog-header">
+    <h2>Recently Added Blog Posts</h2>
+  </div>
+
+  <!-- Looping throught blog list and displaying it with ejs templates -->
+  <div class="home-blog-list-container">
+    <% if (articles !='' ) { %>
+    
+      <% articles.forEach(article=> { %>
+    
+        <a href="/<%= article.id %>" class="home-blog-item">
+          <div class="home-blog-image" style="background-image: url('/uploads/<%= article.image %>')"></div>
+
+          <div class="home-blog-title">
+            <h3><%= article.title.slice(0.25) %></h3>
+            <p><b>Snippet: </b><%= article.description.slice(0,170) %>...</p>
+          </div>
+
+          <div class="home-blog-time">
+            <p><%= article.category %></p>
+            <p><b>Date:</b><%= article.created.toLocaleDateString() %></p>
+          </div>
+          
+          <div class="home-blog-icons">
+            <article><i class="fas fa-comment"></i> <%= article.comment %></article>
+            <article><i class="fas fa-heart"></i> <%= article.likes %></article>
+            <article><i class="fas fa-share"></i> <%= article.comment %></article>
+          </div>
+        </a>
+        <% }) %>
+
+        <!-- HTML to show if there are  no blogs in the database -->
+    <% } else {%>
+      <div class="home-blog-empty">
+        <h2>No Blog Articles Have Been Added!! :(</h2>
+      </div>
+    <% } %>
+  </div>
+  <div class="home-blog-buttons">
+    <a href="/archive">View All Blogs</a>
+    <a href="/add-blog">Add New Blog</a>
+  </div>
+  
+</section>

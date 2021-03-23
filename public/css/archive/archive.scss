@@ -1,0 +1,153 @@
+// The style sheet for the archive page
+
+.archive-container {
+  display: grid;
+  grid-template-columns: 69% 30%;
+  justify-content: center;
+  align-items: flex-start;
+  grid-column-gap: 10px;
+  padding: 30px 0;
+  width: 74%;
+  margin: 0 auto;
+
+  .archive-blog-header {
+    background-color: var(--primary-text-color);
+    color: var(--quinary-text-color);
+    padding: 10px 7px;
+  }
+
+  // STYLING FOR THE BLOG LIST OF THE ARCHIVE PAGE
+  .archive-blog-list {
+    .popup-message {
+      padding: 10px 0;
+
+      p {
+        text-align: center;
+        font-size: 20px;
+        color: var(--primary-text-color);
+      }
+
+      .post-message {
+        background-color: lightgreen;
+      }
+
+      .update-message {
+        background-color: var(--secondary-text-color);
+      }
+
+      .delete-message {
+        background-color: rgb(230, 99, 99);
+      }
+    }
+
+    .archive-blog-item-inner {
+      display: grid;
+      grid-template-columns: 40% 58%;
+      grid-column-gap: 10px;
+      margin: 15px 0;
+      box-shadow: 1px 1px 5px var(--quatenary-text-color);
+
+      .archive-blog-item-image {
+        padding: 120px 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: -10;
+
+        p {
+          color: var(--quinary-text-color);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          margin: 0 0 10px 10px;
+          background-color: var(--secondary-text-color);
+          font-weight: bold;
+          padding: 10px 20px;
+        }
+      }
+
+      // STYLING FOR THE TEXT SECTION OF THE ARCHIVE PAGE BLOG LIST
+      .archive-blog-item-text {
+        padding: 20px 0 0 10px;
+
+        h3 {
+          font-size: 20px;
+          color: var(--primary-text-color);
+          padding-bottom: 10px;
+        }
+
+        h3 + div {
+          display: flex;
+          justify-content: flex-start;
+
+          p {
+            margin-right: 30px;
+            font-weight: lighter;
+            color: var(--tetiary-text-color);
+            padding-bottom: 10px;
+          }
+        }
+
+        p {
+          color: var(--tetiary-text-color);
+          padding: 0 20px 30px 0;
+        }
+
+        .blog-buttons {
+          .blog-edit-button,
+          .blog-delete-button {
+            padding: 10px 20px;
+            background-color: var(--secondary-text-color);
+            margin-right: 5px;
+            color: var(--quinary-text-color);
+          }
+
+          .blog-edit-button:hover,
+          .blog-delete-button:hover {
+            box-shadow: 0 2px 0 var(--secondary-text-color);
+          }
+        }
+
+        @media only screen and (max-width: 900px) {
+          padding-bottom: 40px;
+        }
+      }
+    }
+
+    .archive-blog-item-inner:hover .archive-blog-item-text h3 {
+      color: var(--secondary-text-color);
+    }
+
+    .blog-empty {
+      display: grid;
+      text-align: center;
+      padding: 100px 0;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        padding-top: 20px;
+        a {
+          padding: 10px 20px;
+          background-color: var(--secondary-text-color);
+          color: var(--primary-text-color);
+          transition: all ease 0.5s;
+        }
+        a:hover {
+          box-shadow: 0 2px 0 var(--secondary-text-color);
+          transition: all ease 0.5s;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1300px) {
+    width: 95%;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 950px) {
+    grid-template-columns: 90%;
+    row-gap: 30px;
+  }
+}

@@ -1,0 +1,170 @@
+.footer {
+  background-image: var(--tetiary-gradient), url("https://images.pexels.com/photos/3612931/pexels-photo-3612931.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  padding: 50px 0 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80%;
+      grid-template-columns: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer-divider {
+  background-color: var(--quinary-text-color);
+  width: 90%;
+  margin: 5px auto;
+  height: 1px;
+}
+
+.footer .footer-title {
+  font-weight: normal;
+  padding-bottom: 5px;
+  color: var(--quinary-text-color);
+}
+
+.footer .footer-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 22% 22% 22% 22%;
+      grid-template-columns: 22% 22% 22% 22%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .footer-container .footer-first .footer-logo a {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.footer .footer-container .footer-first p {
+  padding-top: 10px;
+  color: var(--quinary-text-color);
+  font-size: 17px;
+}
+
+.footer .footer-container .footer-second {
+  padding-left: 30px;
+  color: var(--quinary-text-color);
+}
+
+.footer .footer-container .footer-second .footer-second-links {
+  color: var(--quinary-text-color);
+  font-size: 17px;
+}
+
+.footer .footer-container .footer-second .footer-second-links :hover {
+  color: var(--secondary-text-color);
+}
+
+.footer .footer-container .footer-second .footer-second-links p {
+  padding-bottom: 15px;
+}
+
+.footer .footer-container .footer-third p {
+  color: var(--quinary-text-color);
+  font-size: 17px;
+  padding: 5px 0 10px;
+}
+
+.footer .footer-container .footer-fourth p {
+  color: var(--quinary-text-color);
+  padding: 5px 0 10px;
+  font-size: 17px;
+}
+
+.footer .footer-container .footer-fourth div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 65% 30%;
+      grid-template-columns: 65% 30%;
+  grid-column-gap: 10px;
+}
+
+.footer .footer-container .footer-fourth div input {
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.footer .footer-container .footer-fourth div input:focus {
+  font-style: italic;
+}
+
+.footer .footer-container .footer-fourth div button {
+  padding: 10px 0;
+  background-color: var(--secondary-text-color);
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.footer .footer-container .footer-fourth div button:hover {
+  -webkit-box-shadow: 0 3px 0 var(--secondary-text-color);
+          box-shadow: 0 3px 0 var(--secondary-text-color);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+@media only screen and (max-width: 1100px) {
+  .footer .footer-container {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+  }
+  .footer .footer-container .footer-second {
+    padding-left: 0;
+  }
+  .footer .footer-container .footer-fourth {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .footer .footer-container {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+.footer .footer-copyright {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: var(--quinary-text-color);
+  padding-top: 20px;
+}
+
+.footer .footer-copyright p {
+  padding-bottom: 20px;
+}
+
+.footer .footer-copyright .footer-copyright-icons {
+  font-size: 15px;
+}
+
+.footer .footer-copyright .footer-copyright-icons i {
+  border: 2px solid var(--quinary-text-color);
+  padding: 13px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.footer .footer-copyright .footer-copyright-icons i:hover {
+  color: var(--secondary-text-color);
+  border-color: var(--secondary-text-color);
+}
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,35 @@
+<!-- HTML MARK UP FOR THE ADD BLOG PAGE FORM -->
+<form action="/add-blog" method="POST" enctype="multipart/form-data" class="add-form">
+
+  <h2>Create A New Blog</h2>
+
+  <div class="form-group">
+    <label for="title">Blog Title :</label>
+    <input type="text" name="title" id="title" maxlength="40" placeholder="Enter Blog Title" required />
+  </div>
+
+  <div class="form-group">
+    <label for="author">Blog Author:</label>
+    <input type="text" name="author" id="author" maxlength="40" placeholder="Enter Blog Author" required />
+  </div>
+
+  <div class="form-group">
+    <label for="category">Blog Category:</label>
+    <input type="text" name="category" id="category" maxlength="60" placeholder="Enter Blog Category" required/>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Blog Description:</label>
+    <textarea name="description" id="description" minlength="90" placeholder="Enter Blog Description | Minimum 90 Characters" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="image">Blog Image:</label>
+    <input type="file" name="image" class="image-form-group" id="image-uploader" required />
+  </div>
+
+  <div class="add-form-button-group">
+    <a href="/archive" class="add-form-cancel">Cancel</a>
+    <button type="submit" class="add-form-submit">Submit</button>
+  </div>
+</form>

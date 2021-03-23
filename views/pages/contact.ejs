@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+  <%- include('../partials/nav.ejs') %>
+
+  <!-- HTML MARKUP FOR THE CONTACT PAGE -->
+  <div class="contact-info">
+    <article>
+      <i class="fas fa-envelope"></i>
+      <p>To send us an email with your questions and messages, use the address above.</p>
+      <h4><b>Email:</b> fashionbit@domain.com</h4>
+    </article>
+
+    <article>
+      <i class="fas fa-mobile"></i>
+      <p>To speak to an online attendant, call this number. available 08:00AM - 10:00PM</p>
+      <h4><b>Phone:</b> +380-000-999</h4>
+    </article>
+
+    <article>
+      <i class="fas fa-fax"></i>
+      <p>To send us a fax message with your questions and messages, use the number above</p>
+      <h4><b>Fax:</b> +380 111 555 1111</h4>
+    </article>
+  </div>
+
+  <form class="contact-form">
+    <h2>GET IN TOUCH</h2>
+    <p>Fill in the form below to keep in touch with us or send your questions and messages.</p>
+
+    <div class="contact-form-group">
+      <label for='contact-name'>Name:</label>
+      <input type="text" name="contact-name" placeholder="Enter Name" />
+    </div>
+
+    <div class="contact-form-group">
+      <label for='contact-email'>Email:</label>
+      <input type="email" name="contact-email" placeholder="Enter Email" />
+    </div>
+
+    <div class="contact-form-group">
+      <label for='contact-website'>Website:</label>
+      <input type="text" name="contact-website" placeholder="Enter Email" />
+    </div>
+
+    <div class="contact-form-group">
+      <label for='contact-message'>Message:</label>
+      <textarea name="contact-message" placeholder="Enter Message"></textarea>
+    </div>
+
+    <div class="contact-button">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <%- include('../partials/footer.ejs') %>
+</body>
+</html>

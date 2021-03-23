@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+  <%- include('../partials/nav.ejs') %>
+
+  <!-- THE BANNER SECTION -->
+  <section id='detail-banner'>
+    <h3><%= results.title %></h3>
+  </section>
+
+  <!-- DETAIL PAGE CONTAINER -->
+  <section class="detail-container">
+  
+    <!-- BLOG DETAIL INFO -->
+    <article class="blog-detail-info">
+      <!-- FEATURED IMAGE -->
+      <div class="blog-detail-featured-image" style="background-image: url('/uploads/<%= results.image %>')">
+      </div>
+
+      <h3 class="blog-title"><%= results.title %></h3>
+      <!-- AUTHOR BOX -->
+      <div class="blog-detail-author-box">
+        <div class="author-box-image" style="background-image: url('/uploads/<%= results.image %>')"></div>
+
+        <div class="author-box-text">
+          <p><b>Written By:</b> <%= results.author %></p>
+          <p><%= results.mins %> mins read</p>
+        </div>
+      </div>
+
+      <!-- BLOG DESCRIPTION -->
+      <p class="blog-description"><%= results.description %></p>
+
+      <!-- EDIT AND DELETE BUTTON -->
+      <div class="edit-del-buttons">
+        <a href="/edit/<%= results.id %>" class="detail-edit-button">Edit Blog</a>
+        <a href="/delete/<%= results.id %>" class="detail-del-button">Delete Blog</a>
+      </div>
+
+      <!-- COMMENT FORM SECTION -->
+      <form action="#" method="POST">
+        <h3>Post A Comment</h3>
+
+        <div class="comment-form-group names">
+          <label for="first-name">First Name:
+            <input name="first-name" type="text" placeholder="first name" />
+          </label>
+          <label for="last-name">Last Name:
+            <input name="last-name" type="text" placeholder="last name" />
+          </label>
+        </div>
+
+        <div class="comment-form-group">
+          <label for="subject">Subject:
+            <input type="text" name="subject" placeholder="enter subject" />
+          </label>
+        </div>
+
+        <div class="comment-form-group">
+          <label for="description-message">Message:
+            <textarea placeholder="enter message" name="description-message"></textarea>
+          </label>
+        </div>
+
+        <div class="comment-form-group">
+          <button type="submit" >Submit</button>
+        </div>
+      </form>
+    </article>
+
+    <!-- BLOG DETAIL PAGE SIDE BAR -->
+    <article class="archive-side-bar">
+      <h3 class="archive-blog-header">Newly Added</h3>
+    
+      <%- include('../partials/archive/archive-side-bar.ejs') %>
+    </article>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <%- include('../partials/footer.ejs') %>
+</body>
+</html>

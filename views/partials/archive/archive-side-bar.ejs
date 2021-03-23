@@ -1,0 +1,56 @@
+<!-- HTML MARKUP FOR THE ARCHIVE PAGE SIDE BAR -->
+<div class="archive-side-bar-list">
+  <% if (articles !='' ) { %>
+
+    <% articles.slice(0,4).forEach(article => { %>
+      <a href="/<%= article.id %>" class="side-bar-list-item">
+        <div class="side-bar-blog">
+          <article style="background-image: url('/uploads/<%= article.image %>');">
+          </article>
+          <article>
+            <h4>
+              <%= article.title %>
+            </h4>
+            <p>
+              <%= article.description.slice(0,50) %>..
+            </p>
+          </article>
+        </div>
+      </a>
+      <% }) %>
+        <% } %>
+</div>
+
+<h3 class="archive-blog-header">Categories</h3>
+<div class="archive-side-bar-category">
+  <% if (articles !='' ) { %>
+    <% articles.slice(0,8).forEach(article=> { %>
+      <div class="side-bar-category">
+        <p>
+          <%= article.category.slice(0,8) %>...
+        </p>
+      </div>
+      <% }) %>
+        <% } %>
+</div>
+
+<!-- THE NEWSLETTER SECTION OF THE ARCHIVE PAGE SIDE BAR -->
+<h3 class="archive-blog-header">NewsLetter</h3>
+<div class="archive-side-bar-newsletter">
+  <p>To keep up with the latest and popular fashion trends, sign up to our newsletter to receive weekly blog articles and
+  posts...</p>
+  <div class="side-bar-newsletter-container">
+    <input type="email" placeholder="enter email" required />
+    <button type="submit">Submit</button>
+  </div>
+</div>
+
+<!-- THE SOCIAL MEDIA NETWORK LINKS SECTION OF THE ARCHIVE PAGE SIDE BAR -->
+<h3 class="archive-blog-header">Social Networks</h3>
+<div class="archive-side-bar-social-network">
+  <p><i class="fab fa-facebook"></i></p>
+  <p><i class="fab fa-twitter"></i></p>
+  <p><i class="fab fa-instagram"></i></p>
+  <p><i class="fab fa-snapchat"></i></p>
+  <p><i class="fab fa-linkedin"></i></p>
+</div>

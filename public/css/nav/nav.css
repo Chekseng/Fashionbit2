@@ -1,0 +1,182 @@
+/* Styling the info nav */
+.info-nav {
+  display: flex;
+  padding: 7px 200px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg);
+}
+
+.info-nav .location-info {
+  display: flex;
+}
+
+.info-nav .location-info > div {
+  margin: 0 10px;
+}
+
+.location-info .date,
+.location-info .time {
+  border-left: 1px solid gray;
+  padding-left: 15px;
+}
+
+.location-info .date {
+  display: flex;
+}
+
+.location-info .date .full-date {
+  display: flex;
+  padding-left: 5px;
+}
+
+#month-day-number,
+#month-name,
+#year {
+  margin-left: 4px;
+}
+
+/* styling the social icons */
+.social-icons {
+  padding-right: 8px;
+}
+
+.social-icons div i {
+  font-size: 15px;
+  margin: 0 5px;
+}
+
+/* Styling the nav bar */
+.navbar {
+  background-color: var(--primary-text-color);
+  padding: 15px 200px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: all ease 0.5s;
+  box-shadow: 0 3px 7px black;
+}
+
+.navbar-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all ease 0.5s;
+}
+
+/* styling the nav logo */
+.nav-logo {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.outer-logo {
+  color: #fff;
+}
+
+.inner-logo {
+  color: var(--secondary-text-color);
+}
+
+/* Styling the nav menu */
+
+.nav-menu ul {
+  display: flex;
+}
+
+.nav-menu ul li a {
+  padding: 0 10px;
+  font-size: 17px;
+  color: #fff;
+}
+
+.nav-menu ul li a:hover {
+  color: var(--secondary-text-color);
+}
+
+/* styling the toggle button */
+.toggle {
+  font-size: 25px;
+  color: var(--secondary-text-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 17px 20px;
+  display: none;
+}
+
+@media only screen and (max-width: 1300px) {
+  .navbar {
+    padding: 10px 30px;
+  }
+
+  .info-nav {
+    padding: 7px 20px;
+  }
+}
+
+/* Tablet menu */
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    padding: 10px 30px;
+  }
+
+  .info-nav {
+    padding: 7px 20px;
+  }
+}
+
+/* Mobile menu */
+@media only screen and (max-width: 700px) {
+  .info-nav {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    padding: 10px;
+  }
+
+  .nav-menu {
+    display: none;
+    padding-top: 15px;
+    width: 100%;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-menu ul li a {
+    display: block;
+    padding: 5px 10px;
+  }
+
+  .nav-menu ul li a:hover {
+    background-color: aliceblue;
+  }
+
+  .toggle {
+    cursor: pointer;
+    display: block;
+  }
+
+  .show-nav-menu {
+    display: block;
+  }
+
+  .hide-nav-menu {
+    display: none;
+  }
+}

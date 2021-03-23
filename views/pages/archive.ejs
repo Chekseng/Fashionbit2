@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+  <%- include('../partials/nav.ejs') %>
+
+  <!-- THE ARCHIVE PAGE CONTAINER SECTION -->
+  <section class="archive-container">
+
+    <!-- ARCHIVE PAGE BLOG LIST  -->
+    <article class="archive-blog-list">
+
+      <!-- MARKUP FOR THE INDIVIDUAL BLOG ITEMS -->
+      <div class="archive-blog-items">
+        <h3 class="archive-blog-header">All Blogs</h3>
+
+        <!-- THE SUCCESS, EDIT AND DELETE POPUP MESSAGE DIVS -->
+        <% if (message) { %>
+          <div class=" popup-message">
+            <p class="post-message">
+              <%= message.postMessage %>
+            </p>
+            <p class="update-message">
+              <%= message.updateMessage %>
+            </p>
+            <p class="delete-message">
+              <%= message.deleteMessage %>
+            </p>
+          </div>
+        <% } %>
+
+        <!-- ARCHIVE BLOG LIST -->
+        <% if (articles != '') { %>
+         
+          <% articles.forEach(article => { %>
+           
+            <a href="/<%= article.id %>" class="archive-blog-item">
+
+              <div class="archive-blog-item-inner" >
+                <!-- BLOG ITEM IMAGE -->
+                <article class="archive-blog-item-image" style="background-image: url('/uploads/<%= article.image %>')">
+                  <p><%= article.category %></p>
+                </article>
+                
+                <!-- BLOG ITEM TTILE, DESCRIPTION, BUTTONS, LIKES, COMMENTS -->
+                <article class="archive-blog-item-text">
+                  <h3><%= article.title %></h3>
+                  <div>
+                    <p>
+                      <i class="fas fa-user"></i>
+                      <%= article.author %>
+                    </p>
+                    <p>
+                      <i class="fas fa-comments"></i>
+                      <%= article.comment %>
+                    </p>
+                    <p>
+                      <i class="fas fa-heart"></i>
+                      <%= article.likes %>
+                    </p>
+                  </div>
+
+                  <!-- BLOG ITEM DESCRIPTION TEXT SNIPPET -->
+                  <p><%= article.description.slice(0,200) %>...</p>
+
+                  <!-- BLOG ITEM TEXT BUTTONS -->
+                  <div class="blog-buttons">
+                    <a href="/edit/<%= article.id %>" class="blog-edit-button">Edit Blog</a>
+                    <a href="/delete/<%= article.id %>" class="blog-delete-button">Delete Blog</a>
+                  </div>
+                </article>
+              </div>
+            </a>
+          <% }) %>
+
+        <% } else { %>
+          <!-- DIV TO BE DISPLAYED IF BLOG LIST IS EMPTY -->
+          <div class="blog-empty">
+            <h2>No Blog Articles Have Been Added!! :(</h2>
+            <div>
+              <a href="/add-blog">Add New Blog</a>
+            </div>
+          </div>
+        <% }  %>
+      </div>
+
+    </article>
+
+    <!-- ARCHIVE PAGE SIDE BAR -->
+    <article class="archive-side-bar">
+      <h3 class="archive-blog-header">Newly Added</h3>
+
+      <%- include('../partials/archive/archive-side-bar.ejs') %>
+    </article>
+  </section>
+  
+  <%- include('../partials/footer.ejs') %>
+</body>
+</html>

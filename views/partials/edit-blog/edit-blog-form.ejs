@@ -1,0 +1,39 @@
+<!-- HTML MARKUP FOR THE EDIT PAGE FORM -->
+<form action="/update/<%= results.id %>" method="POST" enctype="multipart/form-data" id="edit-form">
+
+  <h2>EDIT <%= results.title %></h2>
+
+  <div class="form-group">
+    <label for="title">Blog Title :</label>
+    <input type="text" name="title" id="title" maxlength="40" placeholder="Enter Blog Title" value = "<%= results.title %>" required />
+  </div>
+
+  <div class="form-group">
+    <label for="author">Blog Author:</label>
+    <input type="text" name="author" id="author" maxlength="40" placeholder="Enter Blog Author" value="<%= results.author %>" required />
+  </div>
+
+  <div class="form-group">
+    <label for="category">Blog Category:</label>
+    <input type="text" name="category" id="category" maxlength="60" placeholder="Enter Blog Category" value="<%= results.category %>" required />
+  </div>
+
+  <div class="form-group">
+    <label for="description">Blog Description:</label>
+    <textarea name="description" id="description" minlength="90"
+      placeholder="Enter Blog Description | Minimum 90 Characters" required><%= results.description %></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="image">Blog Image:</label>
+    <input type="file" name="image" class="image-form-group" id="image-uploader" required />
+    <div class="edit-image" alt="" style="background-image: url('/uploads/<%= results.image %>')"></div>
+  </div>
+
+  <input type="hidden" name="old_image" value="<%= results.image %>" />
+
+  <div class="add-form-button-group">
+    <a href="/archive" class="add-form-cancel">Cancel</a>
+    <button type="submit" class="add-form-submit">Submit</button>
+  </div>
+</form>

@@ -1,0 +1,51 @@
+<!-- HTML MARK UP FOR THE FOOTER SECTION TEMPLATE -->
+<footer class="footer">
+  
+  <article class="footer-container">
+    <div class="footer-first">
+      <div class="footer-logo">
+        <a href="/">
+          <span class="outer-logo">Fashion<span class="inner-logo">Bit</span>
+        </a>
+      </div>
+      <p><%= footerData.aboutUs.paragraph %></p>
+    </div>
+
+    <div class="footer-second">
+      <h2 class="footer-title"><%= footerData.Navigation.title %></h2>
+      <% footerData.Navigation.links.forEach(link => { %>
+       <a href="<%= link.href %>" class="footer-second-links"><p><%= link.linkName %></p></a>
+      <% }) %>
+    </div>
+
+    <div class="footer-third">
+      <h2 class="footer-title"><%= footerData.Contact.title %></h2>
+      <p><%= footerData.Contact.email %></p>
+      <p><%= footerData.Contact.phone1 %></p>
+      <p><%= footerData.Contact.phone2 %></p>
+    </div>
+
+    <div class="footer-fourth">
+      <h2 class="footer-title"><%= footerData.NewsLetter.title %></h2>
+      <p><%= footerData.NewsLetter.paragraph %></p>
+      
+      <div class="newsletter-container">
+        <input type="email" placeholder="enter email" required />
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+
+  </article>
+  <div class="footer-divider"></div>
+
+  <article class="footer-copyright">
+    <p>copyright &copy; 2021, All Rights Reserved | Website Owned By FashionBit.com</p>
+    <div class="footer-copyright-icons">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-google-plus"></i>
+    </div>
+  </article>
+</footer>

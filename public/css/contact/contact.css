@@ -1,0 +1,129 @@
+.contact-info {
+  display: -ms-grid;
+  display: grid;
+  width: 74%;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  padding: 50px 0;
+}
+
+.contact-info article {
+  background-color: var(--primary-text-color);
+  padding: 30px 10px;
+  text-align: center;
+  color: var(--secondary-text-color);
+  display: -ms-grid;
+  display: grid;
+}
+
+.contact-info article i {
+  font-size: 40px;
+}
+
+.contact-info article p {
+  padding: 10px 5px;
+  font-weight: lighter;
+  color: var(--quinary-text-color);
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  font-style: italic;
+}
+
+.contact-info article h4 {
+  padding: 15px 0 0;
+}
+
+.contact-info article:hover h4,
+.contact-info article:hover i {
+  color: var(--quinary-text-color);
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact-info {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-info {
+    -ms-grid-columns: 90%;
+        grid-template-columns: 90%;
+    row-gap: 20px;
+  }
+}
+
+.contact-form {
+  width: 50%;
+  margin: 0 auto 60px;
+  background-color: var(--primary-text-color);
+  padding: 20px 10px 40px;
+}
+
+.contact-form h2 {
+  color: var(--secondary-text-color);
+  text-align: center;
+  font-size: 30px;
+}
+
+.contact-form h2 + p {
+  color: var(--secondary-text-color);
+  padding: 0 20px 20px;
+  text-align: center;
+}
+
+.contact-form .contact-form-group {
+  width: 73%;
+  margin: 0 auto;
+  padding-bottom: 12px;
+}
+
+.contact-form .contact-form-group label {
+  display: block;
+  color: var(--secondary-text-color);
+  font-size: 17px;
+  padding: 0 0 10px;
+}
+
+.contact-form .contact-form-group input {
+  padding: 8px 5px;
+  width: 100%;
+}
+
+.contact-form .contact-form-group textarea {
+  padding: 8px 5px;
+  width: 100%;
+  height: 100px;
+}
+
+.contact-form .contact-button {
+  width: 73%;
+  margin: 0 auto;
+}
+
+.contact-form .contact-button button {
+  background-color: var(--secondary-text-color);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact-form {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-form {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

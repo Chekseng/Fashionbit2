@@ -1,0 +1,173 @@
+.hero-container {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "first second third fifth"
+    "first second third fifth"
+    "first second fourth fifth"
+    "first second fourth fifth";
+  grid-gap: 10px;
+  padding: 10px 0;
+  background-color: var(--primary-bg);
+}
+
+.hero-container > div {
+  background-color: var(--secondary-text-color);
+  background-size: cover;
+  transition: all ease 0.8s;
+}
+
+.first-grid {
+  grid-area: first;
+  background-image: var(--primary-gradient),
+    url("https://images.pexels.com/photos/1342609/pexels-photo-1342609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transition: all ease 0.5s;
+}
+
+.first-grid:hover {
+  background-image: var(--secondary-gradient),
+    url("https://images.pexels.com/photos/1342609/pexels-photo-1342609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transition: all ease 0.5s;
+}
+
+.second-grid {
+  grid-area: second;
+  background-image: var(--primary-gradient),
+    url("https://images.pexels.com/photos/1689731/pexels-photo-1689731.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  transition: all ease 0.5s;
+}
+
+.second-grid:hover {
+  background-image: var(--secondary-gradient),
+    url("https://images.pexels.com/photos/1689731/pexels-photo-1689731.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  transition: all ease 0.5s;
+}
+
+.third-grid {
+  grid-area: third;
+  background-image: var(--primary-gradient),
+    url("https://images.pexels.com/photos/2760848/pexels-photo-2760848.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  transition: all ease 0.5s;
+}
+
+.third-grid:hover {
+  background-image: var(--secondary-gradient),
+    url("https://images.pexels.com/photos/2760848/pexels-photo-2760848.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  transition: all ease 0.5s;
+}
+
+.fourth-grid {
+  grid-area: fourth;
+  background-image: var(--primary-gradient),
+    url("https://images.pexels.com/photos/3775120/pexels-photo-3775120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: right;
+  transition: all ease 0.5s;
+}
+
+.fourth-grid:hover {
+  background-image: var(--secondary-gradient),
+    url("https://images.pexels.com/photos/3775120/pexels-photo-3775120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transition: all ease 0.5s;
+}
+
+.fifth-grid {
+  grid-area: fifth;
+  background-image: var(--primary-gradient),
+    url("https://images.pexels.com/photos/952629/pexels-photo-952629.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  transition: all ease 0.5s;
+}
+
+.fifth-grid:hover {
+  background-image: var(--secondary-gradient),
+    url("https://images.pexels.com/photos/952629/pexels-photo-952629.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  transition: all ease 0.5s;
+}
+
+.first-grid article,
+.second-grid article,
+.fifth-grid article {
+  width: 330px;
+  color: white;
+  padding-top: 470px;
+  padding-bottom: 50px;
+}
+
+.third-grid article,
+.fourth-grid article {
+  padding-top: 170px;
+  color: #fff;
+}
+
+.hero-container article {
+  padding-left: 10px;
+}
+
+.h-c-category {
+  font-weight: lighter;
+  font-size: 16px;
+  padding-bottom: 10px;
+  font-style: italic;
+  color: var(--secondary-text-color);
+}
+
+.h-c-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.h-c-date {
+  font-size: 14px;
+  font-weight: lighter;
+  color: var(--secondary-text-color);
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero-container {
+    grid-template-areas:
+      "first first second second fifth fifth"
+      "first first second second fifth fifth"
+      "third third third fourth fourth fourth"
+      "third third third fourth fourth fourth";
+  }
+
+  .fourth-grid article {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .hero-container {
+    grid-template-areas:
+      "first first second second"
+      "first first second second"
+      "fifth fifth fifth fifth"
+      "third third fourth fourth"
+      "third third fourth fourth";
+  }
+
+  .fourth-grid article {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .second-grid {
+    display: none;
+  }
+
+  .fourth-grid {
+    display: none;
+  }
+
+  .third-grid article {
+    padding-bottom: 20px;
+  }
+
+  .hero-container {
+    grid-template-areas:
+      "first"
+      "third"
+      "fifth";
+  }
+}

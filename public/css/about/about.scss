@@ -1,0 +1,123 @@
+// The style sheet for the about page
+
+.about-body {
+  display: grid;
+
+  justify-content: center;
+
+  .about-info {
+    display: grid;
+    width: 74%;
+    margin: 0 auto;
+    grid-template-columns: 32% 32% 32%;
+    justify-content: center;
+    column-gap: 20px;
+    padding: 50px 0;
+
+    div {
+      display: grid;
+      grid-template-columns: 20% 80%;
+      background-color: var(--primary-text-color);
+      padding: 40px 20px;
+      cursor: pointer;
+
+      article:first-child i {
+        font-size: 60px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: var(--secondary-text-color);
+      }
+
+      article:last-child {
+        padding: 0 0 0 10px;
+        h4 {
+          color: var(--secondary-text-color);
+          font-size: 20px;
+        }
+
+        p {
+          color: var(--quinary-text-color);
+          font-weight: lighter;
+          padding: 10px 10px 0 0;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1000px) {
+      width: 90%;
+    }
+
+    @media only screen and (max-width: 800px) {
+      display: grid;
+      grid-template-columns: 90%;
+      row-gap: 20px;
+    }
+
+    div:hover article:first-child i,
+    div:hover article:last-child h4 {
+      color: var(--quinary-text-color);
+    }
+  }
+
+  .about-description {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0 0 50px 0;
+
+    .about-description-image {
+      background-image: url("https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-size: cover;
+      padding: 200px;
+      background-position: center;
+    }
+
+    .about-description-text {
+      padding: 50px 100px 0 20px;
+      background-color: var(--primary-bg);
+
+      h2 {
+        color: var(--primary-text-color);
+      }
+
+      h2 + p {
+        color: var(--quatenary-text-color);
+      }
+
+      .about-description-text-icon {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        padding-top: 20px;
+        column-gap: 20px;
+
+        i {
+          font-size: 30px;
+          color: var(--secondary-text-color);
+          padding-bottom: 10px;
+        }
+
+        p {
+          color: var(--quatenary-text-color);
+          font-style: italic;
+          padding-top: 10px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1300px) {
+      .about-description-text {
+        padding-right: 10px;
+      }
+    }
+
+    @media only screen and (max-width: 1000px) {
+      display: grid;
+      grid-template-columns: 90%;
+      justify-content: center;
+
+      .about-description-text {
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
