@@ -10,7 +10,7 @@ const path = require('path')
 // set up multer for file upload
 let storage = multer.diskStorage({
   destination: (req,file,cb) => {
-    cb(null, './public/uploads')
+    cb(null, 'public/uploads')
   },
   filename: (req,file,cb) => {
     cb(null, `${file.fieldname}_${Date.now()}_${file.originalname}`)
